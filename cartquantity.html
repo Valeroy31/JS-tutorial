@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3> Cart Quantity</h3>
+    <button id="show" onclick="zeroCart()">Show Quantity</button>
+    <button id="add" onclick="plusOne()">Add to Cart</button>
+    <button id="increase" onclick="plusTwo()">+2</button>
+    <button id="increasee" onclick="plusThree()">+3</button>
+    <button  onclick="reset()">Reset Cart</button>
+
+    <p id="text"></p>
+</body>
+</html>
+
+<script>
+    let quantity = 0
+    
+    
+    let str = `Cart Quantity: `
+    let string =  str + quantity
+    function zeroCart() {
+        document.getElementById('text').innerHTML = string
+    }
+   
+    function plusOne() {
+    quantity++
+        quantities = str + (quantity)
+        document.getElementById('text').innerHTML = quantities
+    }
+
+    function plusTwo() {
+        quantity += 2
+        quantities = str + (quantity)
+        document.getElementById('text').innerHTML = quantities
+    }
+
+    function plusThree() {
+        quantity = quantity + 3
+        quantities = str + (quantity)
+        document.getElementById('text').innerHTML = quantities
+    }
+function reset() {
+    quantity = 0
+    quantities = string
+    document.getElementById('text').innerHTML = quantities
+    alert('Your cart was emptied!')
+}
+   
+</script>
