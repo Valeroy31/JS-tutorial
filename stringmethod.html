@@ -6,11 +6,63 @@
     <title>Document</title>
 </head>
 <body>
-    
+   <p>Insert Your Age:</p><input type="number" id="age">
+
+    <h1 id="ans"></h1>
+    <button onclick="allAge()">Calculate</button>
+
+
+    <p>Insert Your Age:</p><input type="number" id="aged">
+
+    <h1 id="ans"></h1>
+    <button onclick="allAged()">Calculate</button>
 </body>
 </html>
 
 <script>
+
+    function allAged(params) {
+        yourAge = document.getElementById('aged').value
+let myAge = 21
+let ageTotal = Math.abs(yourAge - 21) 
+
+if (yourAge > myAge) {
+    document.getElementById('ans').innerHTML = `Your are ${ageTotal} years older than me`
+}
+else if (yourAge == myAge){
+    document.getElementById('ans').innerHTML = 'You and I are Age mates!'
+}
+else{
+    document.getElementById('ans').innerHTML = `Your are ${ageTotal} years younger than me`
+}
+    }
+
+
+
+
+   
+
+    function allAge(params) {
+        let Age = document.getElementById('age').value
+        let ageLeft = 18 - Age
+let ageRem = `Hold on, you have ${ageLeft} years to go`
+
+if (Age >= 18) 
+    document.getElementById('ans').innerHTML = 'Congratulations! You are old enough to drive!'
+ 
+else {
+document.getElementById('ans').innerHTML = ageRem
+}
+}
+const std = new Date()
+console.log(std);
+console.log(std.getFullYear());
+console.log(std.getTime());
+
+
+
+
+
     str = '      You cannot end a sentence with because because because is a conjunction     ' 
     console.log(str.trim(' ').replace('end', 'begin'));
     
@@ -33,5 +85,9 @@ console.log(string2.indexOf('because'));
 
 console.log(string2.substr(31,24));
 
-    
+const now = new Date()
+console.log(now) 
+
+// const agree = confirm('Are you sure you like to delete? ')
+console.log(agree) // result will be true or false based on what you click on the dialog box
 </script>
